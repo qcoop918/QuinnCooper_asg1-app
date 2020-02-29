@@ -9,7 +9,7 @@ class Lookup extends React.Component {
         this.state = { movie: this.props.movie, movieView: true, starView: false, castID: "" }
     }
     async componentDidMount() {
-        let url = "http://www.randyconnolly.com/funwebdev/3rd/api/movie/movies.php?id=" + this.props.movie.id;
+        let url = "https://www.randyconnolly.com/funwebdev/3rd/api/movie/movies.php?id=" + this.props.movie.id;
         const response = await fetch(url)
         const data = await response.json();
         this.setState({ movieInfo: data })
